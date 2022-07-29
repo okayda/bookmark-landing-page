@@ -1,0 +1,22 @@
+.btn {
+  &:link,
+  &:visited {
+    display: inline-block;
+    padding: 1.4rem 1rem;
+    font-size: 1.6rem;
+    border-radius: 6px;
+    text-decoration: none;
+  }
+
+  &--blue:link,
+  &--blue:visited {
+    background-color: $soft-blue;
+    color: $color-white;
+  }
+
+  &--greyish:link,
+  &--greyish:visited {
+    background-color: lighten($grayish-blue, 32%);
+    color: $color-black;
+  }
+}
