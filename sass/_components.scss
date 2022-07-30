@@ -104,3 +104,15 @@
     margin: 3.2rem 0;
   }
 }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+
+  &__input,
+  &__btn {
+    padding: 1.4rem 2rem;
+    border-radius: 6px;
+  }
+}
