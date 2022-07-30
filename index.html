@@ -18,6 +18,8 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="css/style.css" />
+
+    <script defer src="main.js"></script>
   </head>
   <body>
     <header class="header">
@@ -52,7 +54,7 @@
     <main>
       <section class="hero">
         <div class="hero__box">
-          <div class="hero__img-container">
+          <div class="hero__img-container margin-bottom-medium">
             <img
               src="images/illustration-hero.svg"
               alt="Browser"
@@ -62,8 +64,10 @@
           </div>
 
           <div class="hero__content txt-center">
-            <h1 class="hero__title">A Simple Bookmark Manager</h1>
-            <p class="hero__description">
+            <h1 class="hero__title margin-bottom-small">
+              A Simple Bookmark Manager
+            </h1>
+            <p class="hero__description margin-bottom-medium">
               A clean and simple interface to organize your favourite websites.
               Open a new browser tab and see your sites load instantly.
               <span class="heavy">Try it for free.</span>
@@ -78,9 +82,9 @@
 
       <section class="feature">
         <div class="feature__box">
-          <div class="feature__content-main txt-center">
-            <h2 class="feature__title-main">Features</h2>
-            <p class="feature__description-main">
+          <div class="feature__content-main margin-bottom-large txt-center">
+            <h2 class="feature__title-main margin-bottom-small">Features</h2>
+            <p class="feature__description-main margin-bottom-medium">
               Our aim is to make it quick and easy for you to access your
               favourite websites. Your bookmarks sync between your devices so
               you can access them on the go.
@@ -98,7 +102,7 @@
             </ul>
           </div>
 
-          <div class="feature__img-container">
+          <div class="feature__img-container margin-bottom-large txt-center">
             <img
               src="images/illustration-features-tab-1.svg"
               alt="Browser"
@@ -119,7 +123,9 @@
           /> -->
 
           <div class="feature__content feature__content--1 txt-center">
-            <h2 class="feature__title">Bookmark in one click</h2>
+            <h2 class="feature__title margin-bottom-small">
+              Bookmark in one click
+            </h2>
             <p class="feature__description">
               Organize your bookmarks however you like. Our simple drag-and-drop
               interface gives you complete control over how you manage your
@@ -148,47 +154,61 @@
 
       <section class="product">
         <div class="product__box">
-          <div class="product__content">
-            <h2 class="product__title">Download the extension</h2>
-            <p class="product__description">
+          <div class="product__content txt-center">
+            <h2 class="product__title margin-bottom-small">
+              Download the extension
+            </h2>
+            <p class="product__description margin-bottom-medium">
               We've got more browsers in the pipeline. Please do let us know if
               you've got a favorite you'd like us to prioritize.
             </p>
           </div>
 
-          <div class="product__extensions">
+          <div class="product__extensions txt-center">
             <div class="extension">
               <img
                 src="images/logo-chrome.svg"
                 alt="Chrome"
-                class="extension__brand"
+                class="extension__brand margin-bottom-small"
               />
-              <h3 class="extention__title">Add to Chrome</h3>
-              <span class="extension__sub-title">Minimum version 62</span>
+              <h3 class="extension__title margin-bottom-x-small">
+                Add to Chrome
+              </h3>
+              <span class="extension__sub-title margin-bottom-small"
+                >Minimum version 62</span
+              >
               <img src="images/bg-dots.svg" alt="" class="extension__dots" />
-              <a href="#" class="btn">Add & Install Extension</a>
+              <a href="#" class="btn btn--blue">Add & Install extension</a>
             </div>
             <div class="extension">
               <img
                 src="images/logo-firefox.svg"
                 alt="Chrome"
-                class="extension__brand"
+                class="extension__brand margin-bottom-small"
               />
-              <h3 class="extention__title">Add to Firefox</h3>
-              <span class="extension__sub-title">Minimum version 55</span>
+              <h3 class="extension__title margin-bottom-x-small">
+                Add to Firefox
+              </h3>
+              <span class="extension__sub-title margin-bottom-small"
+                >Minimum version 55</span
+              >
               <img src="images/bg-dots.svg" alt="" class="extension__dots" />
-              <a href="#" class="btn">Add & Install Extension</a>
+              <a href="#" class="btn btn--blue">Add & Install extension</a>
             </div>
             <div class="extension">
               <img
                 src="images/logo-opera.svg"
                 alt="Chrome"
-                class="extension__brand"
+                class="extension__brand margin-bottom-small"
               />
-              <h3 class="extention__title">Add to Opera</h3>
-              <span class="extension__sub-title">Minimum version 46</span>
+              <h3 class="extension__title margin-bottom-x-small">
+                Add to Opera
+              </h3>
+              <span class="extension__sub-title margin-bottom-small"
+                >Minimum version 46</span
+              >
               <img src="images/bg-dots.svg" alt="" class="extension__dots" />
-              <a href="#" class="btn">Add & Install Extension</a>
+              <a href="#" class="btn btn--blue">Add & Install extension</a>
             </div>
           </div>
         </div>
@@ -196,9 +216,11 @@
 
       <section class="accordion">
         <div class="accordion__box">
-          <div class="accordion__content">
-            <h2 class="accordion__title">Frequently Asked Questions</h2>
-            <p class="accordion__description">
+          <div class="accordion__content txt-center">
+            <h2 class="accordion__title margin-bottom-small">
+              Frequently Asked Questions
+            </h2>
+            <p class="accordion__description margin-bottom-large">
               Here are some of our FAWs. if you have any other questions you'd
               like answered please feel free to email us.
             </p>
@@ -206,26 +228,24 @@
 
           <div class="accordion__questions">
             <div class="question">
-              <a href="#" class="question__btn">
+              <button class="question__btn">
                 <span class="question__title">What is bookmark?</span>
                 <img
                   src="images/icon-arrow.svg"
                   alt=""
                   class="question__icon"
                 />
-              </a>
+              </button>
               <div class="question__content">
-                <div class="question__content-inner">
-                  <p class="question__answer">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Fusce tincidunt justo eget ultricies fringilla. Phasellus
-                    blandit ipsum quis quam ornare mattis.
-                  </p>
-                </div>
+                <p class="question__answer">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                  tincidunt justo eget ultricies fringilla. Phasellus blandit
+                  ipsum quis quam ornare mattis.
+                </p>
               </div>
             </div>
             <div class="question">
-              <a href="#" class="question__btn">
+              <button class="question__btn">
                 <span class="question__title"
                   >How can I request a new browser?</span
                 >
@@ -234,42 +254,38 @@
                   alt=""
                   class="question__icon"
                 />
-              </a>
+              </button>
               <div class="question__content">
-                <div class="question__content-inner">
-                  <p class="question__answer">
-                    Vivamus luctus eros aliquet convallis ultricies. Mauris
-                    augue massa, ultricies non ligula. Suspendisse imperdiet.
-                    Vivamus luctus eros aliquet convallis ultricies. Mauris
-                    augue massa, ultricies non ligula. Suspendisse imperdie
-                    tVivamus luctus eros aliquet convallis ultricies. Mauris
-                    augue massa, ultricies non ligula. Suspendisse imperdiet.
-                  </p>
-                </div>
+                <p class="question__answer">
+                  Vivamus luctus eros aliquet convallis ultricies. Mauris augue
+                  massa, ultricies non ligula. Suspendisse imperdiet. Vivamus
+                  luctus eros aliquet convallis ultricies. Mauris augue massa,
+                  ultricies non ligula. Suspendisse imperdie tVivamus luctus
+                  eros aliquet convallis ultricies. Mauris augue massa,
+                  ultricies non ligula. Suspendisse imperdiet.
+                </p>
               </div>
             </div>
             <div class="question">
-              <a href="#" class="question__btn">
+              <button class="question__btn">
                 <span class="question__title">Is there a mobile app?</span>
                 <img
                   src="images/icon-arrow.svg"
                   alt=""
                   class="question__icon"
                 />
-              </a>
+              </button>
               <div class="question__content">
-                <div class="question__content-inner">
-                  <p class="question__answer">
-                    Sed consectetur quam id neque fermentum accumsan. Praesent
-                    luctus vestibulum dolor, ut condimentum urna vulputate eget.
-                    Cras in ligula quis est pharetra mattis sit amet pharetra
-                    purus. Sed sollicitudin ex et ultricies bibendum.
-                  </p>
-                </div>
+                <p class="question__answer">
+                  Sed consectetur quam id neque fermentum accumsan. Praesent
+                  luctus vestibulum dolor, ut condimentum urna vulputate eget.
+                  Cras in ligula quis est pharetra mattis sit amet pharetra
+                  purus. Sed sollicitudin ex et ultricies bibendum.
+                </p>
               </div>
             </div>
             <div class="question">
-              <a href="#" class="question__btn">
+              <button class="question__btn">
                 <span class="question__title"
                   >What about other Chromium browsers?</span
                 >
@@ -278,30 +294,34 @@
                   alt=""
                   class="question__icon"
                 />
-              </a>
+              </button>
               <div class="question__content">
-                <div class="question__content-inner">
-                  <p class="question__answer">
-                    Integer condimentum ipsum id imperdiet finibus. Vivamus in
-                    placerat mi, at euismod dui. Aliquam vitae neque eget nisl
-                    gravida pellentesque non ut velit. More Info 35,000+ already
-                    joined Stay up-to-date with what we’re doing Contact Us
-                    Features Pricing Contact
-                  </p>
-                </div>
+                <p class="question__answer">
+                  Integer condimentum ipsum id imperdiet finibus. Vivamus in
+                  placerat mi, at euismod dui. Aliquam vitae neque eget nisl
+                  gravida pellentesque non ut velit. More Info 35,000+ already
+                  joined Stay up-to-date with what we’re doing Contact Us
+                  Features Pricing Contact
+                </p>
               </div>
             </div>
           </div>
 
-          <a href="#" class="btn">More Info</a>
+          <div class="txt-center">
+            <a href="#" class="btn btn--blue">More Info</a>
+          </div>
         </div>
       </section>
 
       <div class="cta">
         <div class="cta__box">
-          <div class="cta__content">
-            <span class="cta__sub-title">35,000 + Already Joined</span>
-            <h2 class="cta__title">Stay up-to-date with what we're doing</h2>
+          <div class="cta__content txt-center">
+            <span class="cta__sub-title margin-bottom-x-small"
+              >35,000 + Already Joined</span
+            >
+            <h2 class="cta__title margin-bottom-medium">
+              Stay up-to-date with what we're doing
+            </h2>
           </div>
 
           <div class="cta__inputs">

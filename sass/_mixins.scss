@@ -1,0 +1,5 @@
+@mixin wide($dimention) {
+  max-width: $dimention;
+  margin-left: auto;
+  margin-right: auto;
+}

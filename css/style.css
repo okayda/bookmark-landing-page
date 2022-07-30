@@ -1,12 +1,3 @@
-/*
---- 01 TYPOGRAPHY SYSTEM
-- Font sizes (px)
-10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
-
---- 07 WHITESPACE
-- Spacing system (px)
-2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
-*/
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
 *,
 *::before,
@@ -28,6 +19,21 @@ body {
 .txt-center {
   text-align: center; }
 
+.margin-top-small {
+  margin-top: 1.8rem; }
+
+.margin-bottom-x-small {
+  margin-bottom: 1.4rem; }
+
+.margin-bottom-small {
+  margin-bottom: 1.8rem; }
+
+.margin-bottom-medium {
+  margin-bottom: 3.2rem; }
+
+.margin-bottom-large {
+  margin-bottom: 6.8rem; }
+
 .btn:link, .btn:visited {
   display: inline-block;
   padding: 1.4rem 1rem;
@@ -43,14 +49,77 @@ body {
   background-color: #e9eaec;
   color: #000; }
 
-img {
-  width: 100%; }
+.extension {
+  padding: 4rem 0 2rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0 25px -5px, rgba(0, 0, 0, 0.1) 0px 10px 10px -5px;
+  border-radius: 12px; }
+  .extension__brand {
+    width: 10rem;
+    height: 10rem; }
+  .extension__title {
+    font-size: 2.2rem;
+    font-weight: 500; }
+  .extension__sub-title {
+    font-size: 1.6rem;
+    display: inline-block; }
+  .extension .btn {
+    margin-top: 2rem;
+    padding: 1.4rem 2.4rem; }
 
+.question {
+  border-top: 1px solid #ddd;
+  padding: 2.4rem 0;
+  cursor: pointer; }
+  .question:last-child {
+    border-bottom: 1px solid #ddd; }
+  .question__btn {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #000;
+    align-items: center;
+    font-weight: 600;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    text-align: left; }
+  .question__title {
+    font-size: 1.8rem; }
+  .question__content {
+    overflow: hidden;
+    max-height: 0;
+    transition: all 0.4s ease-out; }
+    .answer-active .question__content {
+      max-height: 340px; }
+  .question__icon {
+    width: 1.8rem;
+    height: 1.2rem;
+    line-height: 1;
+    transition: all 0.4s ease-out; }
+    .answer-active .question__icon {
+      transform: rotate(180deg);
+      filter: invert(46%) sepia(41%) saturate(4188%) hue-rotate(332deg) brightness(110%) contrast(96%); }
+  .question__answer {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin: 3.2rem 0; }
+
+/*
+--- 01 TYPOGRAPHY SYSTEM
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+--- 07 WHITESPACE
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
 .header {
   padding: 4.2rem 3.2rem; }
   .header__box {
     max-width: 600px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     justify-content: space-between; }
   .header__nav {
@@ -66,14 +135,16 @@ img {
   padding: 6.4rem 3.2rem; }
   .hero__box {
     max-width: 600px;
-    margin: 0 auto; }
+    margin-left: auto;
+    margin-right: auto; }
   .hero__img-container {
     position: relative;
-    text-align: center; }
-  .hero__img {
     max-width: 520px;
-    height: auto;
-    position: relative; }
+    margin-left: auto;
+    margin-right: auto; }
+  .hero__img {
+    width: 100%;
+    height: auto; }
   .hero__bg-img {
     background-color: #5368df;
     position: absolute;
@@ -85,38 +156,31 @@ img {
     z-index: -10; }
   .hero__title {
     font-size: 3.2rem;
-    font-weight: 500;
-    margin-top: 3.2rem;
-    margin-bottom: 1.8rem; }
+    font-weight: 500; }
   .hero__description {
     font-size: 1.4rem;
     padding: 0 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 3.2rem; }
+    line-height: 1.6; }
   .hero__btn {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.2rem; }
 
 .feature {
-  padding: 4.8rem 3.2rem; }
+  padding: 5.2rem 3.2rem; }
   .feature__box {
-    max-width: 600px;
-    margin: 0 auto; }
-  .feature__content-main {
-    margin-bottom: 7.2rem; }
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto; }
   .feature__title-main {
     font-size: 2.6rem;
-    font-weight: 500;
-    margin-bottom: 1.8rem; }
+    font-weight: 500; }
   .feature__description-main {
     font-size: 1.4rem;
     line-height: 1.6;
-    padding: 0 1rem;
-    margin-bottom: 4.6rem; }
+    padding: 0 1rem; }
   .feature__list {
-    list-style: none;
-    margin-bottom: 3rem; }
+    list-style: none; }
     .feature__list li {
       border-top: 1px solid #ddd; }
       .feature__list li:last-child {
@@ -129,9 +193,9 @@ img {
     padding: 1.6rem 0; }
   .feature__img-container {
     position: relative;
-    text-align: center; }
-  .feature__img {
     max-width: 520px; }
+  .feature__img {
+    width: 100%; }
   .feature__bg-img {
     background-color: #5368df;
     position: absolute;
@@ -142,12 +206,64 @@ img {
     border-radius: 0 200px 200px 0;
     z-index: -10; }
   .feature__title {
-    margin-top: 7.2rem;
     font-size: 2.6rem;
-    font-weight: 500;
-    margin-bottom: 1.8rem; }
+    font-weight: 500; }
   .feature__description {
     font-size: 1.4rem;
     line-height: 1.6;
-    padding: 0 1rem;
-    margin-bottom: 4.6rem; }
+    padding: 0 1rem; }
+
+.product {
+  padding: 5.2rem 3.2rem 6.4rem; }
+  .product__box {
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto; }
+  .product__title {
+    font-size: 2.6rem;
+    font-weight: 500; }
+  .product__description {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    padding: 0 2.2rem; }
+  .product__extensions {
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem; }
+
+.accordion {
+  padding: 6.4rem 3.2rem; }
+  .accordion__box {
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto; }
+  .accordion__title {
+    font-size: 2.6rem;
+    font-weight: 500; }
+  .accordion__description {
+    font-size: 1.4rem;
+    line-height: 1.6; }
+  .accordion__questions {
+    margin-bottom: 5.2rem; }
+  .accordion .btn {
+    padding: 1.4rem 2.2rem; }
+
+.cta {
+  padding: 5.2rem 3.2rem;
+  background-color: #5368df; }
+  .cta__box {
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto; }
+  .cta__sub-title {
+    font-size: 1.4rem;
+    letter-spacing: 4px;
+    color: #fff;
+    display: inline-block; }
+  .cta__title {
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: #fff; }
