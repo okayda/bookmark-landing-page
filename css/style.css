@@ -111,7 +111,145 @@ body {
   gap: 1.4rem; }
   .form__input, .form__btn {
     padding: 1.4rem 2rem;
-    border-radius: 6px; }
+    border-radius: 6px;
+    border: none;
+    font-size: 1.5rem; }
+  .form__input {
+    transition: all 0.6s; }
+    .form__input:focus {
+      outline: none; }
+    .error-active .form__input {
+      background: #fff url("../images/icon-error.svg") no-repeat right 4% bottom 50%;
+      background-size: 2rem;
+      border: 2px solid #fa5757; }
+    .passed-active .form__input {
+      border: 2px solid #40c057;
+      background: #fff; }
+  .form__btn {
+    cursor: pointer;
+    background-color: #fa5757;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin-top: -1rem;
+    transition: all 0.4s; }
+    .form__btn:focus {
+      outline: none; }
+    .error-active .form__btn,
+    .passed-active .form__btn {
+      margin-top: 0; }
+  .form__message {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s; }
+    .error-active .form__message,
+    .passed-active .form__message {
+      opacity: 1;
+      visibility: visible;
+      color: #f1f1f1;
+      padding: 1rem;
+      font-size: 1.3rem;
+      border-radius: 6px;
+      margin-top: -2rem; }
+    .error-active .form__message {
+      background-color: #fa5757; }
+    .passed-active .form__message {
+      background-color: #40c057; }
+
+.header {
+  padding: 4.2rem 3.2rem;
+  position: relative; }
+  .header__spacing {
+    height: 0; }
+    .active-nav .header__spacing {
+      height: 2.8rem; }
+  .header__box {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between; }
+  .header__logo-link .header__logo--white {
+    display: none; }
+  .active-nav .header__logo-link {
+    position: absolute;
+    top: 4.2rem;
+    left: 3.2rem;
+    z-index: 20; }
+    .active-nav .header__logo-link .header__logo--black {
+      display: none; }
+    .active-nav .header__logo-link .header__logo--white {
+      display: block; }
+  .header__nav {
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s ease-in-out;
+    transform: translateX(100%);
+    background-color: rgba(37, 43, 70, 0.95);
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100vh; }
+    .active-nav .header__nav {
+      transform: translateX(0); }
+    .header__nav .header__social {
+      align-self: center;
+      display: flex;
+      align-items: center;
+      gap: 3.6rem;
+      padding: 6.4rem 0; }
+  .header__list {
+    padding: 0 3.2rem;
+    margin-top: 10.4rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    text-align: center; }
+    .header__list li {
+      border-top: 1px solid #9194a1;
+      width: 100%; }
+  .header__link:link, .header__link:visited {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    text-decoration: none;
+    color: #fff;
+    font-size: 2.8rem;
+    padding: 2rem;
+    letter-spacing: 1px; }
+  .header__link--account:link, .header__link--account:visited {
+    padding: 1rem;
+    margin-top: 3rem;
+    border-radius: 6px;
+    border: 2px solid #fff;
+    justify-content: center; }
+  .header__menu {
+    cursor: pointer;
+    background-color: transparent;
+    border: none; }
+    .active-nav .header__menu {
+      position: absolute;
+      top: 4.5rem;
+      right: 3.2rem;
+      z-index: 20; }
+    .header__menu .header__icon {
+      width: 2rem;
+      height: 2rem; }
+      .active-nav .header__menu .header__icon--burger {
+        display: none; }
+      .active-nav .header__menu .header__icon--close {
+        display: block; }
+      .header__menu .header__icon--close {
+        display: none; }
+  .header__icon {
+    width: 2.4rem;
+    height: 2.4rem; }
 
 /*
 --- 01 TYPOGRAPHY SYSTEM
@@ -122,23 +260,6 @@ body {
 - Spacing system (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 */
-.header {
-  padding: 4.2rem 3.2rem; }
-  .header__box {
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    justify-content: space-between; }
-  .header__nav {
-    display: none; }
-  .header__menu {
-    background-color: transparent;
-    border: none; }
-    .header__menu img {
-      width: 2rem;
-      height: 2rem; }
-
 .hero {
   padding: 6.4rem 3.2rem; }
   .hero__box {
@@ -243,7 +364,7 @@ body {
     gap: 4.8rem; }
 
 .accordion {
-  padding: 6.4rem 3.2rem; }
+  padding: 6.4rem 3.2rem 10rem; }
   .accordion__box {
     max-width: 520px;
     margin-left: auto;
@@ -260,7 +381,7 @@ body {
     padding: 1.4rem 2.2rem; }
 
 .cta {
-  padding: 5.2rem 3.2rem;
+  padding: 6.4rem 3.2rem;
   background-color: #5368df; }
   .cta__box {
     max-width: 460px;

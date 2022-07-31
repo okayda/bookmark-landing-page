@@ -8,30 +8,6 @@
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 */
 
-.header {
-  padding: 4.2rem 3.2rem;
-
-  &__box {
-    @include wide(600px);
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__nav {
-    display: none;
-  }
-
-  &__menu {
-    background-color: transparent;
-    border: none;
-
-    img {
-      width: 2rem;
-      height: 2rem;
-    }
-  }
-}
-
 .hero {
   padding: 6.4rem 3.2rem;
 
@@ -182,7 +158,7 @@
 }
 
 .accordion {
-  padding: 6.4rem 3.2rem;
+  padding: 6.4rem 3.2rem 10rem;
 
   &__box {
     @include wide(520px);
@@ -208,7 +184,7 @@
 }
 
 .cta {
-  padding: 5.2rem 3.2rem;
+  padding: 6.4rem 3.2rem;
   background-color: $soft-blue;
 
   &__box {

@@ -20,33 +20,86 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <script defer src="main.js"></script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </head>
   <body>
     <header class="header">
+      <div class="header__spacing">&nbsp;</div>
       <div class="header__box">
-        <a href="#" class="header__logo">
-          <img src="images/logo-bookmark.svg" alt="logo" />
+        <a href="#" class="header__logo-link">
+          <img
+            src="images/logo-bookmark-black.svg"
+            alt="logo"
+            class="header__logo--black"
+          />
+          <img
+            src="images/logo-bookmark-white.svg"
+            alt="logo"
+            class="header__logo--white"
+          />
         </a>
 
         <nav class="header__nav">
           <ul class="header__list">
             <li>
-              <a href="#" class="header__link">Features</a>
+              <a href="#" class="header__link"
+                >Features
+                <ion-icon name="cube-outline" class="header__icon"></ion-icon>
+              </a>
             </li>
             <li>
-              <a href="#" class="header__link">Pricing</a>
+              <a href="#" class="header__link"
+                >Pricing
+                <ion-icon
+                  name="pricetags-outline"
+                  class="header__icon"
+                ></ion-icon>
+              </a>
             </li>
             <li>
-              <a href="#" class="header__link">Contact</a>
+              <a href="#" class="header__link"
+                >Contact
+                <ion-icon name="mail-outline" class="header__icon"></ion-icon>
+              </a>
             </li>
             <li>
-              <a href="#" class="header__link">Login</a>
+              <a href="#" class="header__link header__link--account"
+                >Login
+                <ion-icon name="person-outline" class="header__icon"></ion-icon>
+              </a>
             </li>
           </ul>
+
+          <div class="header__social">
+            <a href="#">
+              <img src="images/icon-facebook.svg" alt="" />
+            </a>
+            <a href="#">
+              <img src="images/icon-twitter.svg" alt="" />
+            </a>
+          </div>
         </nav>
 
         <button class="header__menu">
-          <img src="images/icon-hamburger.svg" alt="" class="header__icon" />
+          <img
+            src="images/icon-hamburger.svg"
+            alt=""
+            class="header__icon header__icon--burger"
+          />
+          <img
+            src="images/icon-close.svg"
+            alt=""
+            class="header__icon header__icon--close"
+          />
         </button>
       </div>
     </header>
@@ -327,10 +380,11 @@
           <div class="cta__inputs">
             <form action="#" class="form">
               <input
-                type="email"
+                type="text"
                 class="form__input"
                 placeholder="Enter your email address"
               />
+              <span class="form__message"></span>
               <button class="form__btn">Contact Us</button>
             </form>
           </div>

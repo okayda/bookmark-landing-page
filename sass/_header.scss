@@ -1,0 +1,147 @@
+.header {
+  padding: 4.2rem 3.2rem;
+  position: relative;
+
+  &__spacing {
+    height: 0;
+    .active-nav & {
+      height: 2.8rem;
+    }
+  }
+
+  &__box {
+    @include wide(600px);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo-link {
+    .header__logo {
+      &--white {
+        display: none;
+      }
+    }
+
+    .active-nav & {
+      position: absolute;
+      top: 4.2rem;
+      left: 3.2rem;
+      z-index: 20;
+
+      .header__logo {
+        &--black {
+          display: none;
+        }
+
+        &--white {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+
+    transition: all 0.5s ease-in-out;
+    transform: translateX(100%);
+    background-color: rgba($dark-blue, 0.95);
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100vh;
+
+    .active-nav & {
+      transform: translateX(0);
+    }
+
+    .header__social {
+      align-self: center;
+      display: flex;
+      align-items: center;
+      gap: 3.6rem;
+      padding: 6.4rem 0;
+    }
+  }
+
+  &__list {
+    padding: 0 3.2rem;
+    margin-top: 10.4rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    text-align: center;
+
+    li {
+      border-top: 1px solid $grayish-blue;
+      width: 100%;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      text-decoration: none;
+      color: $color-white;
+      font-size: 2.8rem;
+      padding: 2rem;
+      letter-spacing: 1px;
+    }
+
+    &--account:link,
+    &--account:visited {
+      padding: 1rem;
+      margin-top: 3rem;
+      border-radius: 6px;
+      border: 2px solid $color-white;
+      justify-content: center;
+    }
+  }
+
+  &__menu {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+
+    .active-nav & {
+      position: absolute;
+      top: 4.5rem;
+      right: 3.2rem;
+      z-index: 20;
+    }
+
+    .header__icon {
+      width: 2rem;
+      height: 2rem;
+
+      .active-nav & {
+        &--burger {
+          display: none;
+        }
+
+        &--close {
+          display: block;
+        }
+      }
+
+      &--close {
+        display: none;
+      }
+    }
+  }
+
+  &__icon {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+}
