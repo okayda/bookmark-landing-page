@@ -16,8 +16,8 @@ Users should be able to:
 
 ## Links
 
-- [Solution URL](https://your-solution-url.com)
-- [Live Site URL](https://your-live-site-url.com)
+- [Solution URL](https://www.frontendmentor.io/challenges/bookmark-landing-page-5d0b588a9edda32581d29158)
+- [Live Site URL](https://jhon-okayda-bookmark-landing-page.netlify.app/)
 
 ## Built with
 
