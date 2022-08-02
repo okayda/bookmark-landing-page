@@ -1,5 +1,25 @@
-@mixin wide($dimention) {
-  max-width: $dimention;
+@mixin wide($dimension) {
+  max-width: $dimension;
   margin-left: auto;
   margin-right: auto;
+}
+
+@mixin removeWide($dimension, $value: 0) {
+  max-width: $dimension;
+  margin-left: $value;
+  margin-right: $value;
+}
+
+@mixin dekstop-responsive($break) {
+  @if ($break == tablet) {
+    @media only screen and (min-width: 37.5em) {
+      @content;
+    }
+  }
+
+  @if ($break == small-dekstop) {
+    @media only screen and (min-width: 62.5em) {
+      @content;
+    }
+  }
 }

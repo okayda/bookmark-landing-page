@@ -1,35 +1,61 @@
 .footer {
-  padding: 4rem 0;
-
   background-color: $dark-blue;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4.6rem;
+  padding: $mobile-footer-space;
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 4.6rem;
+    align-items: center;
+  }
+
+  &__togethere {
+    display: flex;
+    flex-direction: column;
+    gap: 4.6rem;
+  }
 
   &__logo {
+    &--img {
+      width: 18rem;
+      height: auto;
+    }
   }
 
   &__list {
-    list-style: none;
     display: flex;
     flex-direction: column;
+    list-style: none;
     gap: 2.8rem;
   }
 
   &__link {
     &:link,
     &:visited {
+      transition: all 0.3s ease-in-out;
       text-decoration: none;
       color: $grayish-blue;
       font-size: 1.6rem;
       font-weight: 400;
       text-transform: uppercase;
       letter-spacing: 0.5px;
+      height: 2.4rem;
     }
 
     &:hover,
     &:active {
+      color: $soft-red;
+    }
+
+    &--icon:hover,
+    &--icon:active {
+      filter: invert(54%) sepia(65%) saturate(3510%) hue-rotate(329deg)
+        brightness(108%) contrast(96%);
+    }
+
+    &:link img {
+      width: 2.4rem;
+      height: 2.4rem;
     }
   }
 
@@ -37,5 +63,22 @@
     display: flex;
     align-items: center;
     gap: 3rem;
+  }
+
+  @include dekstop-responsive(small-dekstop) {
+    &__box {
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 0 4rem;
+    }
+
+    &__togethere {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &__list {
+      flex-direction: row;
+    }
   }
 }

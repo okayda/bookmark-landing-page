@@ -9,8 +9,34 @@ $dark-blue: hsl(229, 31%, 21%);
 $color-white: #fff;
 $color-black: #000;
 
-$main-heading: 3.2rem;
-$secondary-heading: 2.6rem;
+// Padding whitespace each section
+$mobile-nav-space: 4.2rem 3.2rem;
+$mobile-hero-space: 4rem 3.2rem;
+$mobile-feature-space: 5.2rem 3.2rem;
+$mobile-product-space: 5.2rem 3.2rem 6.4rem;
+$mobile-accordion-space: 8rem 3.2rem 10rem;
+$mobile-cta-space: 6.4rem 3.2rem;
+$mobile-footer-space: 4rem 3.2rem;
 
-$description-size: 1.4rem;
-$description-line-height: 1.6;
+$dekstop-hero-space: 12rem 3.2rem 24rem;
+$dekstop-feature-space: 5.2rem 3.2rem 12rem;
+$dekstop-product-space: 10rem 3.2rem 14rem;
+$dekstop-accordion-space: 10rem 3.2rem 20rem;
+
+// no declaration value
+$dekstop-nav-space: 0;
+$dekstop-cta-space: 0;
+$dekstop-footer-space: 0;
+
+// Heading
+$mobile-main-font: 3.2rem;
+$dekstop-main-font: 4.2rem;
+
+$mobile-secondary-font: 2.6rem;
+$dekstop-secondary-font: 3.2rem;
+
+// Description
+$mobile-font: 1.4rem;
+$dekstop-font: 1.6rem;
+
+$des-line-height: 1.6;

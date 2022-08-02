@@ -10,14 +10,18 @@
 
 html {
   overflow-x: hidden;
-
   font-size: 62.5%;
 }
 
 body {
   overflow-x: hidden;
-
   box-sizing: border-box;
   font-family: "Rubik", sans-serif;
   font-weight: 400;
+
+  @include dekstop-responsive(small-dekstop) {
+    @include wide(1200px);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+      rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  }
 }

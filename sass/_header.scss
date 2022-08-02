@@ -1,22 +1,27 @@
 .header {
-  padding: 4.2rem 3.2rem;
+  padding: $mobile-nav-space;
   position: relative;
 
-  &__spacing {
-    height: 0;
-    .active-nav & {
-      height: 2.8rem;
-    }
+  &__nav-dekstop {
+    display: none;
   }
 
   &__box {
-    @include wide(600px);
+    @include wide(120rem);
     display: flex;
+    height: 3.8rem;
     justify-content: space-between;
+    align-items: center;
   }
 
   &__logo-link {
     .header__logo {
+      &--black,
+      &--white {
+        width: 15rem;
+        height: auto;
+      }
+
       &--white {
         display: none;
       }
@@ -24,7 +29,7 @@
 
     .active-nav & {
       position: absolute;
-      top: 4.2rem;
+      top: 4.7rem;
       left: 3.2rem;
       z-index: 20;
 
@@ -40,7 +45,7 @@
     }
   }
 
-  &__nav {
+  &__nav-mobile {
     display: flex;
     flex-direction: column;
 
@@ -60,22 +65,22 @@
     }
 
     .header__social {
-      align-self: center;
       display: flex;
+      align-self: center;
       align-items: center;
       gap: 3.6rem;
       padding: 6.4rem 0;
     }
   }
 
-  &__list {
-    padding: 0 3.2rem;
-    margin-top: 10.4rem;
-    list-style: none;
+  &__list-mobile {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    padding: 0 3.2rem;
+    margin-top: 10.4rem;
+    list-style: none;
     height: 100vh;
     text-align: center;
 
@@ -85,7 +90,7 @@
     }
   }
 
-  &__link {
+  &__link-mobile {
     &:link,
     &:visited {
       display: flex;
@@ -115,7 +120,7 @@
 
     .active-nav & {
       position: absolute;
-      top: 4.5rem;
+      top: 5rem;
       right: 3.2rem;
       z-index: 20;
     }
@@ -143,5 +148,99 @@
   &__icon {
     width: 2.4rem;
     height: 2.4rem;
+  }
+
+  @media (min-width: 600px) {
+    &__nav-mobile,
+    &__menu {
+      display: none;
+    }
+
+    .active-nav &__logo-link {
+      /*
+    if ever the mobile-nav is open and the user
+    rotate the screen to horizontal will trigger this
+    to fixed the bug
+    */
+      position: static;
+      .header__logo {
+        &--black {
+          display: block;
+        }
+
+        &--white {
+          display: none;
+        }
+      }
+    }
+
+    &__nav-dekstop {
+      display: block;
+    }
+
+    &__list-dekstop {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+    }
+
+    &__link-dekstop {
+      &:link,
+      &:visited,
+      &--account:link,
+      &--account:visited {
+        transition: all 0.3s ease-in-out;
+        display: inline-block;
+        text-decoration: none;
+        font-size: 1.4rem;
+        color: $color-black;
+        position: relative;
+      }
+
+      &::after {
+        transition: all 0.4s;
+        content: "";
+        position: absolute;
+        top: -1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2rem;
+        height: 0.4rem;
+        background-color: $soft-blue;
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      &:hover::after,
+      &:hover,
+      &:active {
+        opacity: 1;
+        visibility: visible;
+        color: $soft-red;
+      }
+
+      &--account:link,
+      &--account:visited {
+        padding: 0.8rem 2.2rem;
+        border-radius: 6px;
+        background-color: $soft-red;
+        color: $color-white;
+        border: 2px solid transparent;
+      }
+
+      &--account:hover,
+      &--account:active {
+        color: $soft-red;
+        background-color: transparent;
+        border: 2px solid $soft-red;
+      }
+    }
+  }
+
+  @include dekstop-responsive(small-dekstop) {
+    &__box {
+      margin: 0 4rem;
+    }
   }
 }

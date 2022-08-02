@@ -1,11 +1,13 @@
 .btn {
   &:link,
   &:visited {
+    transition: all 0.3s ease-in-out;
     display: inline-block;
     padding: 1.4rem 1rem;
     font-size: 1.6rem;
     border-radius: 6px;
     text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 10px 20px -10px;
   }
 
   &--blue:link,
@@ -14,15 +16,29 @@
     color: $color-white;
   }
 
+  &--blue:hover,
+  &--blue:active {
+    background-color: transparent;
+    color: $soft-blue;
+    box-shadow: inset 0 0 0 2px $soft-blue;
+  }
+
   &--greyish:link,
   &--greyish:visited {
     background-color: lighten($grayish-blue, 32%);
     color: $color-black;
   }
+
+  &--greyish:hover,
+  &--greyish:active {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 2px $color-black;
+  }
 }
 
 .extension {
   padding: 4rem 0 2rem;
+  max-width: 28rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0 25px -5px,
     rgba(0, 0, 0, 0.1) 0px 10px 10px -5px;
   border-radius: 12px;
@@ -32,19 +48,50 @@
     height: 10rem;
   }
 
+  &__dots {
+    width: 100%;
+    height: auto;
+  }
+
   &__title {
     font-size: 2.2rem;
     font-weight: 500;
   }
 
   &__sub-title {
-    font-size: 1.6rem;
     display: inline-block;
+    font-size: 1.6rem;
   }
 
   .btn {
     margin-top: 2rem;
     padding: 1.4rem 2.4rem;
+  }
+
+  @include dekstop-responsive(tablet) {
+    &--1 {
+      justify-self: end;
+    }
+
+    &--2 {
+      justify-self: start;
+    }
+
+    &--3 {
+      grid-column: 1 / -1;
+      justify-self: center;
+    }
+  }
+
+  @include dekstop-responsive(small-dekstop) {
+    &--1,
+    &--2 &--3 {
+      justify-self: auto;
+    }
+
+    &--3 {
+      grid-column: auto / auto;
+    }
   }
 }
 
@@ -58,12 +105,12 @@
   }
 
   &__btn {
-    cursor: pointer;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
     text-decoration: none;
     color: $color-black;
-    align-items: center;
     font-weight: 600;
     background-color: transparent;
     border: none;
@@ -142,7 +189,9 @@
     cursor: pointer;
     background-color: $soft-red;
     color: $color-white;
-    font-weight: 400;
+    font-weight: bold;
+    padding: 1.4rem 1.8rem;
+
     letter-spacing: 0.5px;
     margin-top: -1rem;
     transition: all 0.4s;
@@ -155,22 +204,28 @@
     .passed-active & {
       margin-top: 0;
     }
+
+    &:hover {
+      box-shadow: inset 0 0 0 2px $soft-red;
+      background-color: #fff;
+      color: $soft-red;
+    }
   }
 
   &__message {
     opacity: 0;
     visibility: hidden;
     transition: all 0.4s;
+    padding: 1rem;
+    font-size: 1.3rem;
+    border-radius: 6px;
+    color: #f1f1f1;
+    margin-top: -2rem;
 
     .error-active &,
     .passed-active & {
       opacity: 1;
       visibility: visible;
-      color: #f1f1f1;
-      padding: 1rem;
-      font-size: 1.3rem;
-      border-radius: 6px;
-      margin-top: -2rem;
     }
 
     .error-active & {
@@ -179,6 +234,27 @@
 
     .passed-active & {
       background-color: #40c057;
+    }
+  }
+
+  @include dekstop-responsive(small-dekstop) {
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+
+    &__input {
+      flex-grow: 1;
+    }
+
+    &__btn {
+      margin-top: 0;
+    }
+
+    &__message {
+      position: absolute;
+      bottom: -2.8rem;
+      width: 26.98rem;
     }
   }
 }
