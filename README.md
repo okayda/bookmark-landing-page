@@ -24,10 +24,11 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS Flexbox
 - CSS Grid
+- CSS Animation
 - Mobile-first (Layout)
 - SASS/SCSS
 - SCSS Components
-- JavaScript (ES6) & (Event delegation)
+- JavaScript (ES6) , (Event delegation) , (Intersection Observer)
 - NPM (Parcel) & (SASS)
 - BEM
 

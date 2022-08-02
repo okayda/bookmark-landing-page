@@ -299,6 +299,7 @@
   &__extensions {
     @include wide(28rem);
 
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 2.6rem;

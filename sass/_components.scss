@@ -95,6 +95,33 @@
   }
 }
 
+.extension-mini {
+  display: none;
+  @include dekstop-responsive(small-dekstop) {
+    display: block;
+    position: absolute;
+    animation: animate-mini 2s infinite;
+
+    width: 4rem;
+    height: auto;
+
+    &--1 {
+      top: -8rem;
+      left: 18rem;
+    }
+
+    &--2 {
+      top: 3rem;
+      right: 16rem;
+    }
+
+    &--3 {
+      bottom: -2rem;
+      left: 54rem;
+    }
+  }
+}
+
 .question {
   border-top: 1px solid #ddd;
   padding: 2.4rem 0;
