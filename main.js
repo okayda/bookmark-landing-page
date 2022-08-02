@@ -2,7 +2,7 @@
 
 // ? Mobile navigation functionalities
 document.querySelector(".header__menu").addEventListener("click", function () {
-  this.closest("header").classList.toggle("active-nav");
+  document.querySelector("html").classList.toggle("active-nav");
 });
 
 // ? Feature functionalities
